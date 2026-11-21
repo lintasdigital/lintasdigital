@@ -14,9 +14,9 @@
         .nav-links { display: flex; gap: 1.5rem; list-style: none; }
         .nav-links a { color: #0f172a; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .nav-links a:hover { color: #f97316; }
-        .hero { background: linear-gradient(to right, rgba(9,13,22,0.92) 45%, rgba(9,13,22,0.5)), url('https://unsplash.com') center/cover; color: #fff; padding: 5rem 5%; min-height: 420px; display: flex; align-items: center; }
+        .hero { background: linear-gradient(to right, rgba(9,13,22,0.92) 45%, rgba(9,13,22,0.5)), url('https://unsplash.com') center/cover; color: #fff; padding: 5rem 5%; min-height: 400px; display: flex; align-items: center; }
         .hero-content { max-width: 600px; }
-        .hero-content h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 1rem; }
+        .hero-content h1 { font-size: 2.3rem; line-height: 1.2; margin-bottom: 1rem; }
         .hero-content p { color: #cbd5e1; margin-bottom: 1.8rem; }
         .btn-orange { display: inline-block; background: #f97316; color: #fff; padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; }
         .section { padding: 4rem 5%; max-width: 1150px; margin: 0 auto; }
@@ -32,6 +32,7 @@
         .speed { color: #0284c7; font-weight: 800; font-size: 1.4rem; margin: 0.3rem 0; }
         .price { font-weight: 700; color: #334155; background: #f1f5f9; padding: 0.4rem; border-radius: 6px; margin-bottom: 1.2rem; }
         .btn-card { background: #f97316; color: #fff; padding: 0.55rem 1.4rem; border-radius: 50px; border: none; font-weight: 600; cursor: pointer; }
+        .btn-card:hover { background: #ea580c; }
         .tech-bg { background: #f8fafc; padding: 4rem 5%; }
         .tech-grid { max-width: 1150px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
         .tech-box { background: #fff; padding: 1.4rem; border-radius: 8px; border-left: 4px solid #0284c7; box-shadow: 0 2px 10px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between; }
@@ -40,9 +41,10 @@
         .btn-link { color: #f97316; background: none; border: none; font-weight: 700; cursor: pointer; font-size: 0.9rem; }
         .order-box { max-width: 600px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
         .form-group { margin-bottom: 1.1rem; }
-        .form-group label { display: block; font-weight: 600; margin-bottom: 0.3rem; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; }
-        .btn-wa { width: 100%; background: #22c55e; color: #fff; padding: 0.85rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.3rem; color: #0f172a; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; background: #fff; color: #0f172a; }
+        .btn-wa { width: 100%; background: #22c55e; color: #fff; padding: 0.9rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; }
+        .btn-wa:hover { background: #16a34a; }
         footer { background: #090d16; color: #94a3b8; text-align: center; padding: 2rem 1rem; font-size: 0.9rem; }
         @media (max-width: 650px) { .nav-links { display: none; } }
     </style>
@@ -67,7 +69,7 @@
         <div class="hero-content">
             <h1>Koneksi Internet Cepat & Manajemen Jaringan Andal</h1>
             <p>Solusi internet rumahan hingga perkantoran serta layanan profesional setting OLT, MikroTik, VPN, dan RADIUS.</p>
-            <a href="#pesan" class="btn-orange">Pesan Layanan Sekarang</a>
+            <a href="#paket" class="btn-orange">Lihat Paket Internet</a>
         </div>
     </header>
 
@@ -149,9 +151,6 @@
         <div class="order-box">
             <form onsubmit="kirimWA(event)">
                 <div class="form-group">
-                    <label>Nama Lengkap</label>
+                    <label for="nama">Nama Lengkap</label>
                     <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
                 </div>
-                <div class="form-group">
-                    <label>Pilih Paket / Layanan</label>
-                    <select id="layanan-pilih">
