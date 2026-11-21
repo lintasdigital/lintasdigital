@@ -43,7 +43,7 @@ nav{background:#fff;padding:.8rem 5%;display:flex;justify-content:space-between;
 .form-group{margin-bottom:1.1rem}
 .form-group label{display:block;font-weight:600;margin-bottom:.3rem;color:#0f172a}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:.75rem;border:1px solid #cbd5e1;border-radius:8px;font-size:.95rem;background:#fff;color:#0f172a}
-.btn-wa{width:100%;background:#22c55e;color:#fff;padding:.9rem;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+.btn-wa{display:block;text-align:center;text-decoration:none;width:100%;background:#22c55e;color:#fff;padding:.9rem;border-radius:8px;font-size:1rem;font-weight:700}
 .btn-wa:hover{background:#16a34a}
 footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font-size:.9rem}
 @media(max-width:650px){.nav-links{display:none}}
@@ -87,9 +87,9 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font
 <section id="pesan" class="section">
 <div class="section-header"><h2>Formulir Pemesanan</h2><div class="line"></div></div>
 <div class="order-box">
-<div class="form-group"><label for="nama">Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama Anda"></div>
+<div class="form-group"><label for="nama">Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama Anda" oninput="updateLink()"></div>
 <div class="form-group"><label for="layanan-pilih">Paket / Layanan Dipilih</label>
-<select id="layanan-pilih">
+<select id="layanan-pilih" onchange="updateLink()">
 <option value="Paket HOME - 5 Mbps (Rp 70.000/bln)">Paket HOME - 5 Mbps (Rp 70.000/bln)</option>
 <option value="Paket SCHOOL - 10 Mbps (Rp 100.000/bln)">Paket SCHOOL - 10 Mbps (Rp 100.000/bln)</option>
 <option value="Paket FAMILY - 15 Mbps (Rp 150.000/bln)">Paket FAMILY - 15 Mbps (Rp 150.000/bln)</option>
@@ -99,28 +99,26 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font
 <option value="Layanan VPN 1 Router (Rp 50.000)">Layanan VPN 1 Router (Rp 50.000)</option>
 <option value="Layanan RADIUS 1 Router (Rp 50.000)">Layanan RADIUS 1 Router (Rp 50.000)</option>
 </select></div>
-<div class="form-group"><label for="alamat">Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan atau catatan Anda"></textarea></div>
-<button type="button" class="btn-wa" onclick="kirimWA()">Kirim Pesanan ke WhatsApp</button>
+<div class="form-group"><label for="alamat">Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan atau catatan Anda" oninput="updateLink()"></textarea></div>
+<a id="tombol-wa" href="https://wa.me" class="btn-wa">Kirim Pesanan ke WhatsApp</a>
 </div>
 </section>
 <footer><p>&copy; 2026 <strong>LINTAS DIGITAL</strong> - Kontak WhatsApp: 083124860439</p></footer>
 <script>
+function updateLink(){
+var n=document.getElementById('nama').value||'-';
+var l=document.getElementById('layanan-pilih').value;
+var a=document.getElementById('alamat').value||'-';
+var t="Halo Lintas Digital, saya ingin memesan:\nNama: "+n+"\nPaket: "+l+"\nAlamat: "+a;
+document.getElementById('tombol-wa').href="https://wa.me"+encodeURIComponent(t);
+}
 function pilih(item){
 document.getElementById('layanan-pilih').value=item;
+updateLink();
 document.getElementById('pesan').scrollIntoView({behavior:'smooth'});
 document.getElementById('nama').focus();
 }
-function kirimWA(){
-var n=document.getElementById('nama').value.trim();
-var l=document.getElementById('layanan-pilih').value;
-var a=document.getElementById('alamat').value.trim();
-if(n===""||a===""){
-alert("Silakan isi Nama Lengkap dan Alamat terlebih dahulu.");
-return;
-}
-var t="Halo Lintas Digital, saya ingin memesan:\n\nNama: "+n+"\nPaket/Layanan: "+l+"\nAlamat: "+a;
-window.location.href="https://wa.me"+encodeURIComponent(t);
-}
+updateLink();
 </script>
 </body>
 </html>
