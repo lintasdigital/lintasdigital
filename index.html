@@ -87,8 +87,7 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font
 <section id="pesan" class="section">
 <div class="section-header"><h2>Formulir Pemesanan</h2><div class="line"></div></div>
 <div class="order-box">
-<form onsubmit="kirimWA(event)">
-<div class="form-group"><label for="nama">Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama Anda" required></div>
+<div class="form-group"><label for="nama">Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama Anda"></div>
 <div class="form-group"><label for="layanan-pilih">Paket / Layanan Dipilih</label>
 <select id="layanan-pilih">
 <option value="Paket HOME - 5 Mbps (Rp 70.000/bln)">Paket HOME - 5 Mbps (Rp 70.000/bln)</option>
@@ -100,9 +99,8 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font
 <option value="Layanan VPN 1 Router (Rp 50.000)">Layanan VPN 1 Router (Rp 50.000)</option>
 <option value="Layanan RADIUS 1 Router (Rp 50.000)">Layanan RADIUS 1 Router (Rp 50.000)</option>
 </select></div>
-<div class="form-group"><label for="alamat">Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan atau catatan Anda" required></textarea></div>
-<button type="submit" class="btn-wa">Kirim Pesanan ke WhatsApp</button>
-</form>
+<div class="form-group"><label for="alamat">Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan atau catatan Anda"></textarea></div>
+<button type="button" class="btn-wa" onclick="kirimWA()">Kirim Pesanan ke WhatsApp</button>
 </div>
 </section>
 <footer><p>&copy; 2026 <strong>LINTAS DIGITAL</strong> - Kontak WhatsApp: 083124860439</p></footer>
@@ -112,13 +110,16 @@ document.getElementById('layanan-pilih').value=item;
 document.getElementById('pesan').scrollIntoView({behavior:'smooth'});
 document.getElementById('nama').focus();
 }
-function kirimWA(e){
-e.preventDefault();
-var n=document.getElementById('nama').value;
+function kirimWA(){
+var n=document.getElementById('nama').value.trim();
 var l=document.getElementById('layanan-pilih').value;
-var a=document.getElementById('alamat').value;
+var a=document.getElementById('alamat').value.trim();
+if(n===""||a===""){
+alert("Silakan isi Nama Lengkap dan Alamat terlebih dahulu.");
+return;
+}
 var t="Halo Lintas Digital, saya ingin memesan:\n\nNama: "+n+"\nPaket/Layanan: "+l+"\nAlamat: "+a;
-window.open("https://wa.me"+encodeURIComponent(t),"_blank");
+window.location.href="https://wa.me"+encodeURIComponent(t);
 }
 </script>
 </body>
