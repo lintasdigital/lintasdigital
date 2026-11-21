@@ -6,6 +6,7 @@
     <title>Lintas Digital - Internet Service & Network Management</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+        html { scroll-behavior: smooth; }
         body { background-color: #ffffff; color: #1e293b; line-height: 1.6; }
 
         /* Top Bar & Navigasi */
@@ -40,6 +41,8 @@
             font-size: 0.95rem;
             box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
             transition: 0.2s;
+            cursor: pointer;
+            border: none;
         }
         .btn-orange:hover { background: #ea580c; transform: translateY(-2px); }
 
@@ -84,6 +87,8 @@
             font-size: 0.9rem;
             font-weight: 600;
             transition: 0.2s;
+            cursor: pointer;
+            border: none;
         }
         .btn-card:hover { background: #ea580c; }
 
@@ -95,7 +100,35 @@
         .tech-box p { font-size: 0.9rem; color: #64748b; margin-bottom: 1rem; }
         .tech-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 0.8rem; }
         .tech-price { font-weight: 700; color: #0f172a; font-size: 1.05rem; }
-        .tech-link { color: #f97316; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+        .tech-link { color: #f97316; text-decoration: none; font-weight: 600; font-size: 0.85rem; cursor: pointer; background: none; border: none; }
+
+        /* Form Pemesanan */
+        .order-section { padding: 4.5rem 5%; max-width: 650px; margin: 0 auto; }
+        .order-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.4rem; color: #0f172a; font-size: 0.95rem; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            outline: none;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #f97316; }
+        .btn-submit {
+            width: 100%;
+            background: #22c55e;
+            color: white;
+            padding: 0.9rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-submit:hover { background: #16a34a; }
 
         footer { background: #090d16; color: #94a3b8; text-align: center; padding: 2.5rem 1rem; font-size: 0.9rem; }
         footer strong { color: white; }
@@ -120,7 +153,7 @@
         <ul class="nav-links">
             <li><a href="#paket">Paket Internet</a></li>
             <li><a href="#layanan">Monitoring & VPN</a></li>
-            <li><a href="https://whatsapp.com." target="_blank">Kontak</a></li>
+            <li><a href="#pesan">Form Pemesanan</a></li>
         </ul>
     </nav>
 
@@ -128,7 +161,7 @@
         <div class="hero-content">
             <h1>Koneksi Internet Cepat & Manajemen Jaringan Andal</h1>
             <p>Solusi internet rumahan hingga perkantoran serta layanan profesional setting OLT, MikroTik, VPN, dan RADIUS.</p>
-            <a href="https://whatsapp.com." class="btn-orange" target="_blank">Hubungi Kami Sekarang</a>
+            <a href="#pesan" class="btn-orange">Pesan Layanan Sekarang</a>
         </div>
     </header>
 
@@ -147,7 +180,7 @@
                     <h3>HOME</h3>
                     <div class="card-speed">5 Mbps</div>
                     <div class="card-price">Rp 70.000 / bulan</div>
-                    <a href="https://whatsapp.com" class="btn-card" target="_blank">Pilih Paket</a>
+                    <button class="btn-card" onclick="pilihLayanan('Paket HOME - 5 Mbps (Rp 70.000/bln)')">Pilih Paket</button>
                 </div>
             </div>
 
@@ -159,7 +192,7 @@
                     <h3>SCHOOL</h3>
                     <div class="card-speed">10 Mbps</div>
                     <div class="card-price">Rp 100.000 / bulan</div>
-                    <a href="https://whatsapp.com" class="btn-card" target="_blank">Pilih Paket</a>
+                    <button class="btn-card" onclick="pilihLayanan('Paket SCHOOL - 10 Mbps (Rp 100.000/bln)')">Pilih Paket</button>
                 </div>
             </div>
 
@@ -171,7 +204,7 @@
                     <h3>FAMILY</h3>
                     <div class="card-speed">15 Mbps</div>
                     <div class="card-price">Rp 150.000 / bulan</div>
-                    <a href="https://whatsapp.com" class="btn-card" target="_blank">Pilih Paket</a>
+                    <button class="btn-card" onclick="pilihLayanan('Paket FAMILY - 15 Mbps (Rp 150.000/bln)')">Pilih Paket</button>
                 </div>
             </div>
 
@@ -179,23 +212,3 @@
                 <div class="card-logo-box">
                     <img src="logo%20lintas.png" alt="Lintas Digital">
                 </div>
-                <div class="card-body">
-                    <h3>SOCIAL</h3>
-                    <div class="card-speed">20 Mbps</div>
-                    <div class="card-price">Rp 200.000 / bulan</div>
-                    <a href="https://whatsapp.com" class="btn-card" target="_blank">Pilih Paket</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="layanan" class="tech-section">
-        <div class="section-header">
-            <h2>Monitoring, Management & Server</h2>
-            <div class="line"></div>
-        </div>
-
-        <div class="tech-grid">
-            <div class="tech-box">
-                <div>
-                    <h4>1 Set Setting OLT</h4>
