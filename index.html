@@ -43,9 +43,8 @@ nav{background:#fff;padding:.8rem 5%;display:flex;justify-content:space-between;
 .form-group{margin-bottom:1.1rem}
 .form-group label{display:block;font-weight:600;margin-bottom:.3rem;color:#0f172a}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:.75rem;border:1px solid #cbd5e1;border-radius:8px;font-size:.95rem;background:#fff;color:#0f172a}
-.btn-wa{display:block;text-align:center;text-decoration:none;width:100%;background:#22c55e;color:#fff;padding:.9rem;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;border:none;margin-bottom:.6rem}
+.btn-wa{display:block;width:100%;background:#22c55e;color:#fff;padding:.9rem;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;border:none;text-align:center}
 .btn-wa:hover{background:#16a34a}
-.btn-copy{display:block;width:100%;background:#f1f5f9;color:#334155;padding:.7rem;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;border:1px solid #cbd5e1}
 footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font-size:.9rem}
 @media(max-width:650px){.nav-links{display:none}}
 </style>
@@ -70,27 +69,27 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font
 <section id="paket" class="section">
 <div class="section-header"><h2>Paket Internet</h2><div class="line"></div></div>
 <div class="cards-grid">
-<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>HOME</h3><div class="speed">5 Mbps</div><div class="price">Rp 70.000 / bulan</div><button type="button" class="btn-card" onclick="pilih('Paket HOME - 5 Mbps (Rp 70.000/bln)')">Pilih Paket</button></div></div>
-<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>SCHOOL</h3><div class="speed">10 Mbps</div><div class="price">Rp 100.000 / bulan</div><button type="button" class="btn-card" onclick="pilih('Paket SCHOOL - 10 Mbps (Rp 100.000/bln)')">Pilih Paket</button></div></div>
-<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>FAMILY</h3><div class="speed">15 Mbps</div><div class="price">Rp 150.000 / bulan</div><button type="button" class="btn-card" onclick="pilih('Paket FAMILY - 15 Mbps (Rp 150.000/bln)')">Pilih Paket</button></div></div>
-<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>SOCIAL</h3><div class="speed">20 Mbps</div><div class="price">Rp 200.000 / bulan</div><button type="button" class="btn-card" onclick="pilih('Paket SOCIAL - 20 Mbps (Rp 200.000/bln)')">Pilih Paket</button></div></div>
+<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>HOME</h3><div class="speed">5 Mbps</div><div class="price">Rp 70.000 / bulan</div><button type="button" class="btn-card" onclick="pilihPaket('Paket HOME - 5 Mbps (Rp 70.000/bln)')">Pilih Paket</button></div></div>
+<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>SCHOOL</h3><div class="speed">10 Mbps</div><div class="price">Rp 100.000 / bulan</div><button type="button" class="btn-card" onclick="pilihPaket('Paket SCHOOL - 10 Mbps (Rp 100.000/bln)')">Pilih Paket</button></div></div>
+<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>FAMILY</h3><div class="speed">15 Mbps</div><div class="price">Rp 150.000 / bulan</div><button type="button" class="btn-card" onclick="pilihPaket('Paket FAMILY - 15 Mbps (Rp 150.000/bln)')">Pilih Paket</button></div></div>
+<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>SOCIAL</h3><div class="speed">20 Mbps</div><div class="price">Rp 200.000 / bulan</div><button type="button" class="btn-card" onclick="pilihPaket('Paket SOCIAL - 20 Mbps (Rp 200.000/bln)')">Pilih Paket</button></div></div>
 </div>
 </section>
 <div id="layanan" class="tech-bg">
 <div class="section-header"><h2>Monitoring, Management & Server</h2><div class="line"></div></div>
 <div class="tech-grid">
-<div class="tech-box"><div><h4>1 Set Setting OLT</h4><p>Konfigurasi lengkap OLT untuk jaringan fiber optik yang stabil.</p></div><div class="tech-foot"><span>Rp 500.000</span><button type="button" class="btn-link" onclick="pilih('1 Set Setting OLT (Rp 500.000)')">Pesan &rarr;</button></div></div>
-<div class="tech-box"><div><h4>Manajemen MikroTik</h4><p>Pengaturan bandwidth, firewall, routing, dan optimasi trafik router.</p></div><div class="tech-foot"><span>Rp 200.000</span><button type="button" class="btn-link" onclick="pilih('Manajemen MikroTik (Rp 200.000)')">Pesan &rarr;</button></div></div>
-<div class="tech-box"><div><h4>Layanan VPN (1 Router)</h4><p>Akses remote router aman dari mana saja untuk monitoring jaringan.</p></div><div class="tech-foot"><span>Rp 50.000</span><button type="button" class="btn-link" onclick="pilih('Layanan VPN 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
-<div class="tech-box"><div><h4>Layanan RADIUS (1 Router)</h4><p>Manajemen user PPPoE dan Hotspot terpusat untuk billing.</p></div><div class="tech-foot"><span>Rp 50.000</span><button type="button" class="btn-link" onclick="pilih('Layanan RADIUS 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
+<div class="tech-box"><div><h4>1 Set Setting OLT</h4><p>Konfigurasi lengkap OLT untuk jaringan fiber optik yang stabil.</p></div><div class="tech-foot"><span>Rp 500.000</span><button type="button" class="btn-link" onclick="pilihPaket('1 Set Setting OLT (Rp 500.000)')">Pesan &rarr;</button></div></div>
+<div class="tech-box"><div><h4>Manajemen MikroTik</h4><p>Pengaturan bandwidth, firewall, routing, dan optimasi trafik router.</p></div><div class="tech-foot"><span>Rp 200.000</span><button type="button" class="btn-link" onclick="pilihPaket('Manajemen MikroTik (Rp 200.000)')">Pesan &rarr;</button></div></div>
+<div class="tech-box"><div><h4>Layanan VPN (1 Router)</h4><p>Akses remote router aman dari mana saja untuk monitoring jaringan.</p></div><div class="tech-foot"><span>Rp 50.000</span><button type="button" class="btn-link" onclick="pilihPaket('Layanan VPN 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
+<div class="tech-box"><div><h4>Layanan RADIUS (1 Router)</h4><p>Manajemen user PPPoE dan Hotspot terpusat untuk billing.</p></div><div class="tech-foot"><span>Rp 50.000</span><button type="button" class="btn-link" onclick="pilihPaket('Layanan RADIUS 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
 </div>
 </div>
 <section id="pesan" class="section">
 <div class="section-header"><h2>Formulir Pemesanan</h2><div class="line"></div></div>
 <div class="order-box">
-<div class="form-group"><label for="nama">Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama Anda" oninput="updateLink()"></div>
-<div class="form-group"><label for="layanan-pilih">Paket / Layanan Dipilih</label>
-<select id="layanan-pilih" onchange="updateLink()">
+<div class="form-group"><label for="nama">Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama lengkap Anda"></div>
+<div class="form-group"><label for="paket-pilih">Paket / Layanan Dipilih</label>
+<select id="paket-pilih">
 <option value="Paket HOME - 5 Mbps (Rp 70.000/bln)">Paket HOME - 5 Mbps (Rp 70.000/bln)</option>
 <option value="Paket SCHOOL - 10 Mbps (Rp 100.000/bln)">Paket SCHOOL - 10 Mbps (Rp 100.000/bln)</option>
 <option value="Paket FAMILY - 15 Mbps (Rp 150.000/bln)">Paket FAMILY - 15 Mbps (Rp 150.000/bln)</option>
@@ -100,20 +99,33 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font
 <option value="Layanan VPN 1 Router (Rp 50.000)">Layanan VPN 1 Router (Rp 50.000)</option>
 <option value="Layanan RADIUS 1 Router (Rp 50.000)">Layanan RADIUS 1 Router (Rp 50.000)</option>
 </select></div>
-<div class="form-group"><label for="alamat">Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan atau catatan Anda" oninput="updateLink()"></textarea></div>
-<a id="tombol-wa" href="https://wa.me" target="_blank" rel="noopener noreferrer" class="btn-wa">Kirim Pesanan ke WhatsApp</a>
-<button type="button" class="btn-copy" onclick="salinPesan()">Salin Format Pesanan (Jika WA Tidak Terbuka)</button>
+<div class="form-group"><label for="alamat">Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan Anda"></textarea></div>
+<button type="button" class="btn-wa" onclick="kirimKeWhatsApp()">Kirim Pesanan ke WhatsApp</button>
 </div>
 </section>
 <footer><p>&copy; 2026 <strong>LINTAS DIGITAL</strong> - Kontak WhatsApp: 083124860439</p></footer>
 <script>
-function buatTeks(){
-var n=document.getElementById('nama').value||'-';
-var l=document.getElementById('layanan-pilih').value;
-var a=document.getElementById('alamat').value||'-';
-return "Halo Lintas Digital, saya ingin memesan:\nNama: "+n+"\nPaket: "+l+"\nAlamat: "+a;
+function pilihPaket(namaPaket) {
+    document.getElementById('paket-pilih').value = namaPaket;
+    document.getElementById('pesan').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(function() {
+        document.getElementById('nama').focus();
+    }, 500);
 }
-function updateLink(){
-document.getElementById('tombol-wa').href="https://wa.me?text="+encodeURIComponent(buatTeks());
-}
-function pilih(item){
+
+function kirimKeWhatsApp() {
+    var nama = document.getElementById('nama').value.trim();
+    var paket = document.getElementById('paket-pilih').value;
+    var alamat = document.getElementById('alamat').value.trim();
+
+    if (nama === "") {
+        alert("Mohon isi Nama Lengkap Anda terlebih dahulu.");
+        document.getElementById('nama').focus();
+        return;
+    }
+    if (alamat === "") {
+        alert("Mohon isi Alamat Pemasangan Anda terlebih dahulu.");
+        document.getElementById('alamat').focus();
+        return;
+    }
+
