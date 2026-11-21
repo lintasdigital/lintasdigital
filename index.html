@@ -5,90 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lintas Digital - Layanan Internet & Jaringan</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,sans-serif}
 html{scroll-behavior:smooth}
-body{background:#fff;color:#1e293b;line-height:1.6}
-.top-bar{background:#090d16;color:#94a3b8;font-size:.85rem;padding:.5rem 5%;display:flex;justify-content:space-between}
-nav{background:#fff;padding:.8rem 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.logo img{height:46px;display:block}
-.nav-links{display:flex;gap:1.5rem;list-style:none}
-.nav-links a{color:#0f172a;text-decoration:none;font-weight:600;font-size:.95rem}
-.nav-links a:hover{color:#f97316}
-.hero{background:linear-gradient(to right,rgba(9,13,22,.92) 45%,rgba(9,13,22,.5)),url('https://unsplash.com') center/cover;color:#fff;padding:5rem 5%;min-height:400px;display:flex;align-items:center}
-.hero-content{max-width:600px}
-.hero-content h1{font-size:2.3rem;line-height:1.2;margin-bottom:1rem}
-.hero-content p{color:#cbd5e1;margin-bottom:1.8rem}
-.btn-orange{display:inline-block;background:#f97316;color:#fff;padding:.8rem 1.8rem;border-radius:50px;text-decoration:none;font-weight:600}
-.section{padding:4rem 5%;max-width:1150px;margin:0 auto}
-.section-header{text-align:center;margin-bottom:2.5rem}
-.section-header h2{font-size:1.9rem;color:#0f172a;margin-bottom:.4rem}
-.line{width:60px;height:3px;background:#f97316;margin:0 auto}
-.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
-.card{background:#fff;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.08);border:1px solid #e2e8f0;text-align:center;overflow:hidden}
-.card-img{background:#f8fafc;padding:1.2rem;border-bottom:1px solid #f1f5f9}
-.card-img img{max-height:70px;width:auto}
-.card-body{padding:1.4rem 1rem}
-.card-body h3{font-size:1.2rem;color:#0f172a}
-.speed{color:#0284c7;font-weight:800;font-size:1.4rem;margin:.3rem 0}
-.price{font-weight:700;color:#334155;background:#f1f5f9;padding:.4rem;border-radius:6px;margin-bottom:1.2rem}
-.btn-card{background:#f97316;color:#fff;padding:.55rem 1.4rem;border-radius:50px;border:none;font-weight:600;cursor:pointer}
-.btn-card:hover{background:#ea580c}
-.tech-bg{background:#f8fafc;padding:4rem 5%}
-.tech-grid{max-width:1150px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
-.tech-box{background:#fff;padding:1.4rem;border-radius:8px;border-left:4px solid #0284c7;box-shadow:0 2px 10px rgba(0,0,0,.04);display:flex;flex-direction:column;justify-content:space-between}
-.tech-box p{font-size:.9rem;color:#64748b;margin:.4rem 0 1rem}
-.tech-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f1f5f9;padding-top:.8rem;font-weight:700}
-.btn-link{color:#f97316;background:none;border:none;font-weight:700;cursor:pointer;font-size:.9rem}
-.order-box{max-width:600px;margin:0 auto;background:#fff;padding:2rem;border-radius:12px;box-shadow:0 5px 25px rgba(0,0,0,.08);border:1px solid #e2e8f0}
-.form-group{margin-bottom:1.1rem}
-.form-group label{display:block;font-weight:600;margin-bottom:.3rem;color:#0f172a}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:.75rem;border:1px solid #cbd5e1;border-radius:8px;font-size:.95rem;background:#fff;color:#0f172a}
-.btn-wa{display:block;width:100%;background:#22c55e;color:#fff;padding:.9rem;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;border:none;text-align:center}
-.btn-wa:hover{background:#16a34a}
-footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font-size:.9rem}
-@media(max-width:650px){.nav-links{display:none}}
+body{background:#fff;color:#1e293b;line-height:1.5}
+.top{background:#090d16;color:#94a3b8;font-size:.85rem;padding:.5rem 5%;display:flex;justify-content:space-between}
+nav{background:#fff;padding:.8rem 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.logo img{height:45px;display:block}
+.menu{display:flex;gap:1.2rem}
+.menu a{color:#0f172a;text-decoration:none;font-weight:600;font-size:.9rem}
+.hero{background:linear-gradient(to right,rgba(9,13,22,.92) 45%,rgba(9,13,22,.5)),url('https://unsplash.com') center/cover;color:#fff;padding:4.5rem 5%}
+.hero h1{font-size:2.2rem;max-width:550px;margin-bottom:.8rem}
+.hero p{color:#cbd5e1;max-width:550px;margin-bottom:1.5rem}
+.btn-o{display:inline-block;background:#f97316;color:#fff;padding:.75rem 1.6rem;border-radius:50px;text-decoration:none;font-weight:600}
+.sec{padding:3.5rem 5%;max-width:1100px;margin:0 auto}
+.title{text-align:center;margin-bottom:2rem}
+.title h2{font-size:1.8rem;color:#0f172a}
+.line{width:50px;height:3px;background:#f97316;margin:.4rem auto 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.card{background:#fff;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.08);border:1px solid #e2e8f0;text-align:center;overflow:hidden}
+.c-img{background:#f8fafc;padding:1rem;border-bottom:1px solid #f1f5f9}
+.c-img img{max-height:65px}
+.c-body{padding:1.2rem}
+.speed{color:#0284c7;font-weight:800;font-size:1.35rem;margin:.2rem 0}
+.price{font-weight:700;background:#f1f5f9;padding:.35rem;border-radius:6px;margin-bottom:1rem}
+.btn-p{background:#f97316;color:#fff;padding:.5rem 1.3rem;border-radius:50px;border:none;font-weight:600;cursor:pointer}
+.bg-g{background:#f8fafc;padding:3.5rem 5%}
+.t-box{background:#fff;padding:1.2rem;border-radius:8px;border-left:4px solid #0284c7;box-shadow:0 2px 8px rgba(0,0,0,.04);display:flex;flex-direction:column;justify-content:space-between}
+.t-box p{font-size:.88rem;color:#64748b;margin:.4rem 0 1rem}
+.t-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f1f5f9;padding-top:.7rem;font-weight:700}
+.btn-l{color:#f97316;background:none;border:none;font-weight:700;cursor:pointer}
+.form-box{max-width:550px;margin:0 auto;background:#fff;padding:1.8rem;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.08);border:1px solid #e2e8f0}
+.fg{margin-bottom:1rem}
+.fg label{display:block;font-weight:600;margin-bottom:.3rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:.7rem;border:1px solid #cbd5e1;border-radius:8px;font-size:.95rem}
+.btn-wa{width:100%;background:#22c55e;color:#fff;padding:.85rem;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+footer{background:#090d16;color:#94a3b8;text-align:center;padding:1.5rem;font-size:.85rem}
+@media(max-width:600px){.menu{display:none}}
 </style>
 </head>
 <body>
-<div class="top-bar"><span>Layanan Internet & Infrastruktur Jaringan</span><span>WhatsApp: 0831-2486-0439</span></div>
+<div class="top"><span>Layanan Internet & Jaringan</span><span>WA: 0831-2486-0439</span></div>
 <nav>
 <div class="logo"><img src="logo%20lintas.png" alt="Lintas Digital"></div>
-<ul class="nav-links">
-<li><a href="#paket">Paket Internet</a></li>
-<li><a href="#layanan">Monitoring & VPN</a></li>
-<li><a href="#pesan">Form Pemesanan</a></li>
-</ul>
+<div class="menu"><a href="#paket">Paket Internet</a><a href="#layanan">Monitoring & VPN</a><a href="#pesan">Pesan</a></div>
 </nav>
 <header class="hero">
-<div class="hero-content">
 <h1>Koneksi Internet Cepat & Manajemen Jaringan Andal</h1>
-<p>Solusi internet rumahan hingga perkantoran serta layanan profesional setting OLT, MikroTik, VPN, dan RADIUS.</p>
-<a href="#paket" class="btn-orange">Lihat Paket Internet</a>
-</div>
+<p>Solusi internet rumahan hingga perkantoran serta layanan setting OLT, MikroTik, VPN, dan RADIUS.</p>
+<a href="#paket" class="btn-o">Lihat Paket Internet</a>
 </header>
-<section id="paket" class="section">
-<div class="section-header"><h2>Paket Internet</h2><div class="line"></div></div>
-<div class="cards-grid">
-<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>HOME</h3><div class="speed">5 Mbps</div><div class="price">Rp 70.000 / bulan</div><button type="button" class="btn-card" onclick="pilihPaket('Paket HOME - 5 Mbps (Rp 70.000/bln)')">Pilih Paket</button></div></div>
-<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>SCHOOL</h3><div class="speed">10 Mbps</div><div class="price">Rp 100.000 / bulan</div><button type="button" class="btn-card" onclick="pilihPaket('Paket SCHOOL - 10 Mbps (Rp 100.000/bln)')">Pilih Paket</button></div></div>
-<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>FAMILY</h3><div class="speed">15 Mbps</div><div class="price">Rp 150.000 / bulan</div><button type="button" class="btn-card" onclick="pilihPaket('Paket FAMILY - 15 Mbps (Rp 150.000/bln)')">Pilih Paket</button></div></div>
-<div class="card"><div class="card-img"><img src="logo%20lintas.png" alt="Lintas Digital"></div><div class="card-body"><h3>SOCIAL</h3><div class="speed">20 Mbps</div><div class="price">Rp 200.000 / bulan</div><button type="button" class="btn-card" onclick="pilihPaket('Paket SOCIAL - 20 Mbps (Rp 200.000/bln)')">Pilih Paket</button></div></div>
+<section id="paket" class="sec">
+<div class="title"><h2>Paket Internet</h2><div class="line"></div></div>
+<div class="grid">
+<div class="card"><div class="c-img"><img src="logo%20lintas.png" alt="Logo"></div><div class="c-body"><h3>HOME</h3><div class="speed">5 Mbps</div><div class="price">Rp 70.000 / bln</div><button type="button" class="btn-p" onclick="pilih('Paket HOME - 5 Mbps (Rp 70.000/bln)')">Pilih Paket</button></div></div>
+<div class="card"><div class="c-img"><img src="logo%20lintas.png" alt="Logo"></div><div class="c-body"><h3>SCHOOL</h3><div class="speed">10 Mbps</div><div class="price">Rp 100.000 / bln</div><button type="button" class="btn-p" onclick="pilih('Paket SCHOOL - 10 Mbps (Rp 100.000/bln)')">Pilih Paket</button></div></div>
+<div class="card"><div class="c-img"><img src="logo%20lintas.png" alt="Logo"></div><div class="c-body"><h3>FAMILY</h3><div class="speed">15 Mbps</div><div class="price">Rp 150.000 / bln</div><button type="button" class="btn-p" onclick="pilih('Paket FAMILY - 15 Mbps (Rp 150.000/bln)')">Pilih Paket</button></div></div>
+<div class="card"><div class="c-img"><img src="logo%20lintas.png" alt="Logo"></div><div class="c-body"><h3>SOCIAL</h3><div class="speed">20 Mbps</div><div class="price">Rp 200.000 / bln</div><button type="button" class="btn-p" onclick="pilih('Paket SOCIAL - 20 Mbps (Rp 200.000/bln)')">Pilih Paket</button></div></div>
 </div>
 </section>
-<div id="layanan" class="tech-bg">
-<div class="section-header"><h2>Monitoring, Management & Server</h2><div class="line"></div></div>
-<div class="tech-grid">
-<div class="tech-box"><div><h4>1 Set Setting OLT</h4><p>Konfigurasi lengkap OLT untuk jaringan fiber optik yang stabil.</p></div><div class="tech-foot"><span>Rp 500.000</span><button type="button" class="btn-link" onclick="pilihPaket('1 Set Setting OLT (Rp 500.000)')">Pesan &rarr;</button></div></div>
-<div class="tech-box"><div><h4>Manajemen MikroTik</h4><p>Pengaturan bandwidth, firewall, routing, dan optimasi trafik router.</p></div><div class="tech-foot"><span>Rp 200.000</span><button type="button" class="btn-link" onclick="pilihPaket('Manajemen MikroTik (Rp 200.000)')">Pesan &rarr;</button></div></div>
-<div class="tech-box"><div><h4>Layanan VPN (1 Router)</h4><p>Akses remote router aman dari mana saja untuk monitoring jaringan.</p></div><div class="tech-foot"><span>Rp 50.000</span><button type="button" class="btn-link" onclick="pilihPaket('Layanan VPN 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
-<div class="tech-box"><div><h4>Layanan RADIUS (1 Router)</h4><p>Manajemen user PPPoE dan Hotspot terpusat untuk billing.</p></div><div class="tech-foot"><span>Rp 50.000</span><button type="button" class="btn-link" onclick="pilihPaket('Layanan RADIUS 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
+<div id="layanan" class="bg-g">
+<div class="title"><h2>Monitoring, Management & Server</h2><div class="line"></div></div>
+<div class="grid" style="max-width:1100px;margin:0 auto">
+<div class="t-box"><div><h4>1 Set Setting OLT</h4><p>Konfigurasi lengkap OLT untuk jaringan fiber optik.</p></div><div class="t-foot"><span>Rp 500.000</span><button type="button" class="btn-l" onclick="pilih('1 Set Setting OLT (Rp 500.000)')">Pesan &rarr;</button></div></div>
+<div class="t-box"><div><h4>Manajemen MikroTik</h4><p>Pengaturan bandwidth, firewall, dan routing MikroTik.</p></div><div class="t-foot"><span>Rp 200.000</span><button type="button" class="btn-l" onclick="pilih('Manajemen MikroTik (Rp 200.000)')">Pesan &rarr;</button></div></div>
+<div class="t-box"><div><h4>Layanan VPN (1 Router)</h4><p>Akses remote router aman untuk monitoring jaringan.</p></div><div class="t-foot"><span>Rp 50.000</span><button type="button" class="btn-l" onclick="pilih('Layanan VPN 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
+<div class="t-box"><div><h4>Layanan RADIUS (1 Router)</h4><p>Manajemen user PPPoE dan Hotspot terpusat.</p></div><div class="t-foot"><span>Rp 50.000</span><button type="button" class="btn-l" onclick="pilih('Layanan RADIUS 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
 </div>
 </div>
-<section id="pesan" class="section">
-<div class="section-header"><h2>Formulir Pemesanan</h2><div class="line"></div></div>
-<div class="order-box">
-<div class="form-group"><label for="nama">Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama lengkap Anda"></div>
-<div class="form-group"><label for="paket-pilih">Paket / Layanan Dipilih</label>
+<section id="pesan" class="sec">
+<div class="title"><h2>Formulir Pemesanan</h2><div class="line"></div></div>
+<div class="form-box">
+<div class="fg"><label>Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama Anda"></div>
+<div class="fg"><label>Pilihan Paket / Layanan</label>
 <select id="paket-pilih">
 <option value="Paket HOME - 5 Mbps (Rp 70.000/bln)">Paket HOME - 5 Mbps (Rp 70.000/bln)</option>
 <option value="Paket SCHOOL - 10 Mbps (Rp 100.000/bln)">Paket SCHOOL - 10 Mbps (Rp 100.000/bln)</option>
@@ -99,33 +87,25 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font
 <option value="Layanan VPN 1 Router (Rp 50.000)">Layanan VPN 1 Router (Rp 50.000)</option>
 <option value="Layanan RADIUS 1 Router (Rp 50.000)">Layanan RADIUS 1 Router (Rp 50.000)</option>
 </select></div>
-<div class="form-group"><label for="alamat">Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan Anda"></textarea></div>
-<button type="button" class="btn-wa" onclick="kirimKeWhatsApp()">Kirim Pesanan ke WhatsApp</button>
+<div class="fg"><label>Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan"></textarea></div>
+<button type="button" class="btn-wa" onclick="kirimWA()">Kirim Pesanan ke WhatsApp</button>
 </div>
 </section>
-<footer><p>&copy; 2026 <strong>LINTAS DIGITAL</strong> - Kontak WhatsApp: 083124860439</p></footer>
+<footer>&copy; 2026 <strong>LINTAS DIGITAL</strong> - WhatsApp: 083124860439</footer>
 <script>
-function pilihPaket(namaPaket) {
-    document.getElementById('paket-pilih').value = namaPaket;
-    document.getElementById('pesan').scrollIntoView({ behavior: 'smooth' });
-    setTimeout(function() {
-        document.getElementById('nama').focus();
-    }, 500);
+function pilih(p){
+document.getElementById('paket-pilih').value=p;
+document.getElementById('pesan').scrollIntoView({behavior:'smooth'});
+document.getElementById('nama').focus();
 }
-
-function kirimKeWhatsApp() {
-    var nama = document.getElementById('nama').value.trim();
-    var paket = document.getElementById('paket-pilih').value;
-    var alamat = document.getElementById('alamat').value.trim();
-
-    if (nama === "") {
-        alert("Mohon isi Nama Lengkap Anda terlebih dahulu.");
-        document.getElementById('nama').focus();
-        return;
-    }
-    if (alamat === "") {
-        alert("Mohon isi Alamat Pemasangan Anda terlebih dahulu.");
-        document.getElementById('alamat').focus();
-        return;
-    }
-
+function kirimWA(){
+var n=document.getElementById('nama').value.trim();
+var p=document.getElementById('paket-pilih').value;
+var a=document.getElementById('alamat').value.trim();
+if(!n||!a){alert("Isi Nama dan Alamat terlebih dahulu.");return;}
+var msg="Halo Lintas Digital, saya mau pesan:\nNama: "+n+"\nPaket: "+p+"\nAlamat: "+a;
+window.location.href="https://whatsapp.com"+encodeURIComponent(msg);
+}
+</script>
+</body>
+</html>
