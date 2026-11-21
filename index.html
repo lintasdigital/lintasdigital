@@ -43,7 +43,7 @@ nav{background:#fff;padding:.8rem 5%;display:flex;justify-content:space-between;
 .form-group{margin-bottom:1.1rem}
 .form-group label{display:block;font-weight:600;margin-bottom:.3rem;color:#0f172a}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:.75rem;border:1px solid #cbd5e1;border-radius:8px;font-size:.95rem;background:#fff;color:#0f172a}
-.btn-wa{display:block;text-align:center;text-decoration:none;width:100%;background:#22c55e;color:#fff;padding:.9rem;border-radius:8px;font-size:1rem;font-weight:700}
+.btn-wa{display:block;text-align:center;text-decoration:none;width:100%;background:#22c55e;color:#fff;padding:.9rem;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;border:none}
 .btn-wa:hover{background:#16a34a}
 footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font-size:.9rem}
 @media(max-width:650px){.nav-links{display:none}}
@@ -100,7 +100,7 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:2rem 1rem;font
 <option value="Layanan RADIUS 1 Router (Rp 50.000)">Layanan RADIUS 1 Router (Rp 50.000)</option>
 </select></div>
 <div class="form-group"><label for="alamat">Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan atau catatan Anda" oninput="updateLink()"></textarea></div>
-<a id="tombol-wa" href="https://wa.me" class="btn-wa">Kirim Pesanan ke WhatsApp</a>
+<a id="tombol-wa" href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="btn-wa">Kirim Pesanan ke WhatsApp</a>
 </div>
 </section>
 <footer><p>&copy; 2026 <strong>LINTAS DIGITAL</strong> - Kontak WhatsApp: 083124860439</p></footer>
@@ -110,7 +110,9 @@ var n=document.getElementById('nama').value||'-';
 var l=document.getElementById('layanan-pilih').value;
 var a=document.getElementById('alamat').value||'-';
 var t="Halo Lintas Digital, saya ingin memesan:\nNama: "+n+"\nPaket: "+l+"\nAlamat: "+a;
-document.getElementById('tombol-wa').href="https://wa.me"+encodeURIComponent(t);
+var isMobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+var base=isMobile?"https://wa.me":"https://whatsapp.com&text=";
+document.getElementById('tombol-wa').href=base+encodeURIComponent(t);
 }
 function pilih(item){
 document.getElementById('layanan-pilih').value=item;
@@ -118,7 +120,3 @@ updateLink();
 document.getElementById('pesan').scrollIntoView({behavior:'smooth'});
 document.getElementById('nama').focus();
 }
-updateLink();
-</script>
-</body>
-</html>
