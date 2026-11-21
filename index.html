@@ -38,7 +38,7 @@ nav{background:#fff;padding:.8rem 5%;display:flex;justify-content:space-between;
 .fg{margin-bottom:1rem}
 .fg label{display:block;font-weight:600;margin-bottom:.3rem}
 .fg input,.fg select,.fg textarea{width:100%;padding:.7rem;border:1px solid #cbd5e1;border-radius:8px;font-size:.95rem}
-.btn-wa{width:100%;background:#22c55e;color:#fff;padding:.85rem;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+.btn-wa{display:block;text-align:center;text-decoration:none;width:100%;background:#22c55e;color:#fff;padding:.85rem;border-radius:8px;font-size:1rem;font-weight:700}
 footer{background:#090d16;color:#94a3b8;text-align:center;padding:1.5rem;font-size:.85rem}
 @media(max-width:600px){.menu{display:none}}
 </style>
@@ -75,9 +75,9 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:1.5rem;font-si
 <section id="pesan" class="sec">
 <div class="title"><h2>Formulir Pemesanan</h2><div class="line"></div></div>
 <div class="form-box">
-<div class="fg"><label>Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama Anda"></div>
+<div class="fg"><label>Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama Anda" oninput="buatLink()"></div>
 <div class="fg"><label>Pilihan Paket / Layanan</label>
-<select id="paket-pilih">
+<select id="paket-pilih" onchange="buatLink()">
 <option value="Paket HOME - 5 Mbps (Rp 70.000/bln)">Paket HOME - 5 Mbps (Rp 70.000/bln)</option>
 <option value="Paket SCHOOL - 10 Mbps (Rp 100.000/bln)">Paket SCHOOL - 10 Mbps (Rp 100.000/bln)</option>
 <option value="Paket FAMILY - 15 Mbps (Rp 150.000/bln)">Paket FAMILY - 15 Mbps (Rp 150.000/bln)</option>
@@ -87,25 +87,26 @@ footer{background:#090d16;color:#94a3b8;text-align:center;padding:1.5rem;font-si
 <option value="Layanan VPN 1 Router (Rp 50.000)">Layanan VPN 1 Router (Rp 50.000)</option>
 <option value="Layanan RADIUS 1 Router (Rp 50.000)">Layanan RADIUS 1 Router (Rp 50.000)</option>
 </select></div>
-<div class="fg"><label>Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan"></textarea></div>
-<button type="button" class="btn-wa" onclick="kirimWA()">Kirim Pesanan ke WhatsApp</button>
+<div class="fg"><label>Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan" oninput="buatLink()"></textarea></div>
+<a id="link-wa" href="https://wa.me" class="btn-wa">Kirim Pesanan ke WhatsApp</a>
 </div>
 </section>
 <footer>&copy; 2026 <strong>LINTAS DIGITAL</strong> - WhatsApp: 083124860439</footer>
 <script>
+function buatLink(){
+var n=document.getElementById('nama').value||'-';
+var p=document.getElementById('paket-pilih').value;
+var a=document.getElementById('alamat').value||'-';
+var msg="Halo Lintas Digital, saya mau pesan:\nNama: "+n+"\nPaket: "+p+"\nAlamat: "+a;
+document.getElementById('link-wa').href="https://wa.me?text="+encodeURIComponent(msg);
+}
 function pilih(p){
 document.getElementById('paket-pilih').value=p;
+buatLink();
 document.getElementById('pesan').scrollIntoView({behavior:'smooth'});
 document.getElementById('nama').focus();
 }
-function kirimWA(){
-var n=document.getElementById('nama').value.trim();
-var p=document.getElementById('paket-pilih').value;
-var a=document.getElementById('alamat').value.trim();
-if(!n||!a){alert("Isi Nama dan Alamat terlebih dahulu.");return;}
-var msg="Halo Lintas Digital, saya mau pesan:\nNama: "+n+"\nPaket: "+p+"\nAlamat: "+a;
-window.location.href="https://whatsapp.com"+encodeURIComponent(msg);
-}
+buatLink();
 </script>
 </body>
 </html>
