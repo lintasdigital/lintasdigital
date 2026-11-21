@@ -10,11 +10,10 @@
 
         /* Top Bar & Navigasi */
         .top-bar { background: #090d16; color: #94a3b8; font-size: 0.85rem; padding: 0.5rem 5%; display: flex; justify-content: space-between; border-bottom: 1px solid #1e293b; }
-        nav { background: rgba(15, 23, 42, 0.95); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .logo { color: #ffffff; font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem; }
-        .logo span { color: #f97316; }
+        nav { background: #ffffff; padding: 0.8rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .logo img { height: 48px; width: auto; display: block; }
         .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-        .nav-links a { color: #e2e8f0; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
+        .nav-links a { color: #0f172a; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: 0.2s; }
         .nav-links a:hover { color: #f97316; }
 
         /* Hero Banner Gelap dengan Latar Gambar */
@@ -22,13 +21,13 @@
             background: linear-gradient(to right, rgba(9, 13, 22, 0.92) 45%, rgba(9, 13, 22, 0.45)),
                         url('https://unsplash.com') center/cover no-repeat;
             color: white;
-            padding: 6rem 5%;
-            min-height: 460px;
+            padding: 5.5rem 5%;
+            min-height: 440px;
             display: flex;
             align-items: center;
         }
         .hero-content { max-width: 600px; }
-        .hero-content h1 { font-size: 2.6rem; line-height: 1.2; margin-bottom: 1rem; font-weight: 700; }
+        .hero-content h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; font-weight: 700; }
         .hero-content p { color: #cbd5e1; font-size: 1.05rem; margin-bottom: 2rem; }
         .btn-orange {
             display: inline-block;
@@ -50,40 +49,48 @@
         .section-header h2 { font-size: 2rem; color: #0f172a; margin-bottom: 0.5rem; }
         .section-header .line { width: 60px; height: 3px; background: #f97316; margin: 0 auto; }
 
-        /* Grid 4 Kartu dengan Gambar */
+        /* Grid 4 Kartu Paket Internet dengan Logo */
         .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; }
         .service-card {
             background: white;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border: 1px solid #f1f5f9;
+            border: 1px solid #e2e8f0;
             text-align: center;
             transition: 0.25s;
         }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
-        .service-card img { width: 100%; height: 150px; object-fit: cover; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); border-color: #f97316; }
+        .card-logo-box {
+            background: #f8fafc;
+            padding: 1.5rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-logo-box img { max-height: 75px; width: auto; object-fit: contain; }
         .card-body { padding: 1.5rem 1.2rem; }
-        .card-body h3 { font-size: 1.2rem; color: #0f172a; margin-bottom: 0.3rem; }
-        .card-speed { color: #f97316; font-weight: 700; font-size: 1.35rem; margin-bottom: 0.5rem; }
-        .card-price { font-size: 1.05rem; font-weight: 600; color: #475569; margin-bottom: 1.2rem; }
+        .card-body h3 { font-size: 1.25rem; color: #0f172a; margin-bottom: 0.3rem; letter-spacing: 0.5px; }
+        .card-speed { color: #0284c7; font-weight: 800; font-size: 1.45rem; margin-bottom: 0.5rem; }
+        .card-price { font-size: 1.1rem; font-weight: 700; color: #334155; background: #f1f5f9; padding: 0.4rem; border-radius: 6px; margin-bottom: 1.2rem; }
         .btn-card {
             display: inline-block;
-            border: 1.5px solid #f97316;
-            color: #f97316;
-            padding: 0.45rem 1.2rem;
+            background: #f97316;
+            color: white;
+            padding: 0.55rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
             transition: 0.2s;
         }
-        .btn-card:hover { background: #f97316; color: white; }
+        .btn-card:hover { background: #ea580c; }
 
         /* Bagian Layanan Teknis (OLT, MikroTik, VPN, RADIUS) */
         .tech-section { background: #f8fafc; padding: 4rem 5%; }
         .tech-grid { max-width: 1150px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
-        .tech-box { background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f97316; box-shadow: 0 2px 10px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between; }
+        .tech-box { background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0284c7; box-shadow: 0 2px 10px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between; }
         .tech-box h4 { font-size: 1.1rem; color: #0f172a; margin-bottom: 0.4rem; }
         .tech-box p { font-size: 0.9rem; color: #64748b; margin-bottom: 1rem; }
         .tech-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 0.8rem; }
@@ -107,7 +114,9 @@
     </div>
 
     <nav>
-        <div class="logo">LINTAS <span>DIGITAL</span></div>
+        <div class="logo">
+            <img src="logo%20lintas.png" alt="Logo Lintas Digital">
+        </div>
         <ul class="nav-links">
             <li><a href="#paket">Paket Internet</a></li>
             <li><a href="#layanan">Monitoring & VPN</a></li>
@@ -131,7 +140,9 @@
 
         <div class="cards-grid">
             <div class="service-card">
-                <img src="https://unsplash.com" alt="Paket Home">
+                <div class="card-logo-box">
+                    <img src="logo%20lintas.png" alt="Lintas Digital">
+                </div>
                 <div class="card-body">
                     <h3>HOME</h3>
                     <div class="card-speed">5 Mbps</div>
@@ -141,7 +152,9 @@
             </div>
 
             <div class="service-card">
-                <img src="https://unsplash.com" alt="Paket School">
+                <div class="card-logo-box">
+                    <img src="logo%20lintas.png" alt="Lintas Digital">
+                </div>
                 <div class="card-body">
                     <h3>SCHOOL</h3>
                     <div class="card-speed">10 Mbps</div>
@@ -151,7 +164,9 @@
             </div>
 
             <div class="service-card">
-                <img src="https://unsplash.com" alt="Paket Family">
+                <div class="card-logo-box">
+                    <img src="logo%20lintas.png" alt="Lintas Digital">
+                </div>
                 <div class="card-body">
                     <h3>FAMILY</h3>
                     <div class="card-speed">15 Mbps</div>
@@ -161,7 +176,9 @@
             </div>
 
             <div class="service-card">
-                <img src="https://unsplash.com" alt="Paket Social">
+                <div class="card-logo-box">
+                    <img src="logo%20lintas.png" alt="Lintas Digital">
+                </div>
                 <div class="card-body">
                     <h3>SOCIAL</h3>
                     <div class="card-speed">20 Mbps</div>
@@ -186,10 +203,3 @@
                 </div>
                 <div class="tech-footer">
                     <span class="tech-price">Rp 500.000</span>
-                    <a href="https://wa.me?text=Halo%20Lintas%20Digital,%20saya%20butuh%20jasa%201%20Set%20Setting%20OLT" class="tech-link" target="_blank">Pesan &rarr;</a>
-                </div>
-            </div>
-
-            <div class="tech-box">
-                <div>
-                    <h4>Manajemen MikroTik</h4>
