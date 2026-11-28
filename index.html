@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nama Brand Kamu — Solusi Simpel & Cepat</title>
+  <title>Nama Perusahaan — Inovasi Masa Depan</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,253 +12,325 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: #ffffff;
+      background-color: #051329;
       line-height: 1.6;
-      color: #1f2937;
-      background-color: #f9fafb;
-    }
-
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      position: sticky;
-      top: 0;
-      z-index: 10;
     }
 
     .container {
-      max-width: 1020px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 24px;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #061733;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 64px;
+      height: 76px;
     }
 
-    .logo {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #111827;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
     }
 
     .nav-links {
       display: flex;
-      gap: 20px;
       list-style: none;
+      gap: 28px;
     }
 
     .nav-links a {
+      color: #cbd5e1;
       text-decoration: none;
-      color: #4b5563;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
+      transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: #2563eb;
-    }
-
-    .hero {
-      padding: 72px 0;
-      text-align: center;
-      background: linear-gradient(180deg, #eff6ff 0%, #f9fafb 100%);
-    }
-
-    .hero h1 {
-      font-size: 2.2rem;
-      line-height: 1.2;
-      color: #111827;
-      margin-bottom: 16px;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 28px;
-      color: #4b5563;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #2563eb;
       color: #ffffff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
     }
 
-    .btn:hover {
-      background: #1d4ed8;
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(5, 19, 41, 0.95) 0%, rgba(5, 19, 41, 0.78) 55%, rgba(11, 43, 92, 0.45) 100%),
+        radial-gradient(circle at 80% 50%, #1e40af 0%, #051329 70%);
+      overflow: hidden;
     }
 
-    .section {
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -120px;
+      width: 560px;
+      height: 560px;
+      background: conic-gradient(from 180deg, rgba(255, 255, 255, 0.14), rgba(56, 189, 248, 0.08), transparent);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 560px;
       padding: 64px 0;
     }
 
-    .section-title {
-      font-size: 1.6rem;
-      margin-bottom: 24px;
-      text-align: center;
-      color: #111827;
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.18;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      font-size: 0.98rem;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+
+    .btn-white {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #051329;
+      padding: 11px 22px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: background-color 0.2s;
+    }
+
+    .btn-white:hover {
+      background-color: #e2e8f0;
+    }
+
+    /* Sub-bar bawah hero */
+    .sub-bar {
+      background-color: #040e1f;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .sub-bar-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      list-style: none;
+      padding: 16px 0;
+    }
+
+    .sub-bar-list a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .sub-bar-list a.active,
+    .sub-bar-list a:hover {
+      color: #ffffff;
+    }
+
+    /* Section Konten Perusahaan */
+    .section {
+      padding: 72px 0;
+      background-color: #ffffff;
+      color: #0f172a;
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+    }
+
+    .section-header h2 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: #051329;
+      margin-bottom: 8px;
+    }
+
+    .section-header p {
+      color: #475569;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
 
     .card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 20px;
+      border: 1px solid #e2e8f0;
+      border-top: 4px solid #0b2b5c;
+      padding: 24px;
+      border-radius: 6px;
+      background: #f8fafc;
     }
 
     .card h3 {
-      margin-bottom: 8px;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      color: #051329;
+      margin-bottom: 10px;
     }
 
     .card p {
-      color: #4b5563;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
+      color: #475569;
     }
 
-    .contact-box {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 28px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .form-group {
-      margin-bottom: 14px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
-      font-family: inherit;
-    }
-
-    button {
-      background: #2563eb;
-      color: #fff;
-      border: none;
-      padding: 11px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #1d4ed8;
-    }
-
+    /* Footer */
     footer {
-      text-align: center;
-      padding: 28px 0;
-      border-top: 1px solid #e5e7eb;
-      color: #6b7280;
-      font-size: 0.9rem;
-      background: #ffffff;
+      background-color: #051329;
+      color: #94a3b8;
+      padding: 36px 0;
+      font-size: 0.88rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 2.1rem;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header Navigasi -->
   <header>
     <div class="container nav">
-      <a href="#" class="logo">BrandKamu</a>
+      <a href="#" class="brand">
+        <span class="brand-icon">NP</span>
+        <span>Nama Perusahaan</span>
+      </a>
       <ul class="nav-links">
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#investor">Investor</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#karier">Karier</a></li>
+        <li><a href="#bisnis">Unit Bisnis</a></li>
       </ul>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Bangun Kehadiran Digital yang Jelas & Terpercaya</h1>
-        <p>Template halaman utama siap pakai untuk profil usaha, portofolio, atau proyek awal kamu tanpa ribet.</p>
-        <a href="#kontak" class="btn">Hubungi Kami</a>
-      </div>
-    </section>
-
-    <section id="tentang" class="section">
-      <div class="container">
-        <h2 class="section-title">Tentang Kami</h2>
-        <p style="max-width: 700px; margin: 0 auto; text-align: center; color: #4b5563;">
-          Kami membantu ide dan bisnis tampil rapi di internet dengan struktur yang ringan, cepat dimuat, dan mudah dikembangkan.
-        </p>
-      </div>
-    </section>
-
-    <section id="layanan" class="section" style="background: #ffffff; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
-      <div class="container">
-        <h2 class="section-title">Layanan & Fitur</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Desain Responsif</h3>
-            <p>Tampilan menyesuaikan ukuran layar HP, tablet, maupun laptop secara otomatis.</p>
-          </div>
-          <div class="card">
-            <h3>Struktur Rapi</h3>
-            <p>Menggunakan tag HTML semantik agar mudah dibaca mesin pencari dan tim developer.</p>
-          </div>
-          <div class="card">
-            <h3>Siap Di-Deploy</h3>
-            <p>Bisa langsung diunggah ke hosting, GitHub Pages, Vercel, atau Netlify.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="kontak" class="section">
-      <div class="container">
-        <h2 class="section-title">Kontak</h2>
-        <div class="contact-box">
-          <form action="#" method="post">
-            <div class="form-group">
-              <label for="nama">Nama</label>
-              <input type="text" id="nama" name="nama" placeholder="Nama lengkap kamu" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="nama@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="pesan">Pesan</label>
-              <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis kebutuhan atau pertanyaan kamu..." required></textarea>
-            </div>
-            <button type="submit">Kirim Pesan</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <!-- Hero Banner Utama -->
+  <section class="hero">
     <div class="container">
-      &copy; 2026 BrandKamu. Semua hak cipta dilindungi.
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="brand-icon">NP</span>
+          <span>Nama Perusahaan</span>
+        </div>
+        <h1>Masa depan adalah titik awal kami</h1>
+        <p>
+          Setiap hari, kami berinovasi untuk menggerakkan industri ke tingkat berikutnya. Pelajari bagaimana teknologi dan layanan kami membentuk standar baru masa depan.
+        </p>
+        <a href="#bisnis" class="btn-white">Pelajari Lebih Lanjut &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bar Kategori Bawah Hero -->
+  <nav class="sub-bar">
+    <div class="container">
+      <ul class="sub-bar-list">
+        <li><a href="#hari-ini" class="active">Profil Hari Ini</a></li>
+        <li><a href="#teknologi">Teknologi</a></li>
+        <li><a href="#energi">Infrastruktur</a></li>
+        <li><a href="#berkelanjutan">Energi Berkelanjutan</a></li>
+        <li><a href="#bisnis">Semua Bisnis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Section Unit Bisnis -->
+  <section id="bisnis" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Unit Bisnis & Solusi Utama</h2>
+        <p>Fokus strategis kami dalam menghadirkan keandalan dan efisiensi skala enterprise.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Teknologi & Sistem</h3>
+          <p>Pengembangan infrastruktur digital dan sistem terintegrasi untuk operasional modern.</p>
+        </div>
+        <div class="card">
+          <h3>Energi & Manufaktur</h3>
+          <p>Solusi rekayasa dan pengelolaan daya berkinerja tinggi dengan standar keamanan global.</p>
+        </div>
+        <div class="card">
+          <h3>Layanan Konsultasi</h3>
+          <p>Pendampingan transformasi bisnis dari perencanaan hingga implementasi berkelanjutan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>&copy; 2026 Nama Perusahaan. Hak cipta dilindungi undang-undang.</div>
+      <div>Privasi &bull; Syarat & Ketentuan &bull; Kontak</div>
     </div>
   </footer>
 
