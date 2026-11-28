@@ -1,115 +1,266 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lintas Digital - Layanan Internet & Jaringan</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,sans-serif}
-html{scroll-behavior:smooth}
-body{background:#fff;color:#1e293b;line-height:1.5}
-.top{background:#090d16;color:#94a3b8;font-size:.85rem;padding:.5rem 5%;display:flex;justify-content:space-between}
-nav{background:#fff;padding:.8rem 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.logo img{height:45px;display:block}
-.menu{display:flex;gap:1.2rem}
-.menu a{color:#0f172a;text-decoration:none;font-weight:600;font-size:.9rem}
-.menu a{color:#0f172a;text-decoration:none;font-weight:600;font-size:.9rem;transition:all .3s ease;display:inline-block}
-.menu a:hover{color:#f97316;transform:translateY(-2px)}
-.hero{background:linear-gradient(to right,rgba(9,13,22,.92) 45%,rgba(9,13,22,.5)),url('jordan-harrison-40XgDxBfYXM-unsplash.jpg') center/cover;color:#fff;padding:5.5rem 5%}
-.hero h1{font-size:2.2rem;max-width:550px;margin-bottom:.8rem}
-.hero p{color:#cbd5e1;max-width:550px;margin-bottom:1.5rem}
-.btn-o{display:inline-block;background:#f97316;color:#fff;padding:.75rem 1.6rem;border-radius:50px;text-decoration:none;font-weight:600}
-.sec{padding:3.5rem 5%;max-width:1100px;margin:0 auto}
-.title{text-align:center;margin-bottom:2rem}
-.title h2{font-size:1.8rem;color:#0f172a}
-.line{width:50px;height:3px;background:#f97316;margin:.4rem auto 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
-.card{background:#fff;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.08);border:1px solid #e2e8f0;text-align:center;overflow:hidden}
-.c-img{background:#f8fafc;padding:1rem;border-bottom:1px solid #f1f5f9}
-.c-img img{max-height:65px}
-.c-body{padding:1.2rem}
-.speed{color:#0284c7;font-weight:800;font-size:1.35rem;margin:.2rem 0}
-.price{font-weight:700;background:#f1f5f9;padding:.35rem;border-radius:6px;margin-bottom:1rem}
-.btn-p{background:#f97316;color:#fff;padding:.5rem 1.3rem;border-radius:50px;border:none;font-weight:600;cursor:pointer}
-.bg-g{background:#f8fafc;padding:3.5rem 5%}
-.t-box{background:#fff;padding:1.2rem;border-radius:8px;border-left:4px solid #0284c7;box-shadow:0 2px 8px rgba(0,0,0,.04);display:flex;flex-direction:column;justify-content:space-between}
-.t-box p{font-size:.88rem;color:#64748b;margin:.4rem 0 1rem}
-.t-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f1f5f9;padding-top:.7rem;font-weight:700}
-.btn-l{color:#f97316;background:none;border:none;font-weight:700;cursor:pointer}
-.form-box{max-width:550px;margin:0 auto;background:#fff;padding:1.8rem;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.08);border:1px solid #e2e8f0}
-.fg{margin-bottom:1rem}
-.fg label{display:block;font-weight:600;margin-bottom:.3rem}
-.fg input,.fg select,.fg textarea{width:100%;padding:.7rem;border:1px solid #cbd5e1;border-radius:8px;font-size:.95rem}
-.btn-wa{display:block;text-align:center;text-decoration:none;width:100%;background:#22c55e;color:#fff;padding:.85rem;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;border:none}
-footer{background:#090d16;color:#94a3b8;text-align:center;padding:1.5rem;font-size:.85rem}
-@media(max-width:600px){.menu{display:none}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nama Brand Kamu — Solusi Simpel & Cepat</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background-color: #f9fafb;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #111827;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      padding: 72px 0;
+      text-align: center;
+      background: linear-gradient(180deg, #eff6ff 0%, #f9fafb 100%);
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      color: #4b5563;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .section {
+      padding: 64px 0;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 24px;
+      text-align: center;
+      color: #111827;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .contact-box {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 28px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 11px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 0;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 0.9rem;
+      background: #ffffff;
+    }
+  </style>
 </head>
 <body>
-<div class="top"><span>Layanan Internet & Jaringan</span><span>WA: 0831-2486-0439</span></div>
-<nav>
-<div class="logo"><img src="logo%20lintas.png" alt="Lintas Digital"></div>
-<div class="menu"><a href="#">Home</a><a href="#paket">Paket Internet</a><a href="#layanan">Management Server</a><a href="#pesan">Pesan</a></div>
-</nav>
-<header class="hero">
-<h1>Koneksi Internet Cepat & Manajemen Jaringan Anda</h1>
-<p>Solusi internet rumahan hingga layanan setting OLT, MikroTik, VPN, dan RADIUS.</p>
-<a href="#paket" class="btn-o">Lihat Paket Internet</a>
-</header>
-<section id="paket" class="sec">
-<div class="title"><h2>PAKET INTERNET</h2><div class="line"></div></div>
-<div class="grid">
-<div class="card"><div class="c-img"><img src="logo%20lintas.png" alt="Logo"></div><div class="c-body"><h3>HOME</h3><div class="speed">5 Mbps</div><div class="price">Rp 70.000 / bln</div><button type="button" class="btn-p" onclick="pilih('Paket HOME - 5 Mbps (Rp 70.000/bln)')">Pilih Paket</button></div></div>
-<div class="card"><div class="c-img"><img src="logo%20lintas.png" alt="Logo"></div><div class="c-body"><h3>SCHOOL</h3><div class="speed">10 Mbps</div><div class="price">Rp 100.000 / bln</div><button type="button" class="btn-p" onclick="pilih('Paket SCHOOL - 10 Mbps (Rp 100.000/bln)')">Pilih Paket</button></div></div>
-<div class="card"><div class="c-img"><img src="logo%20lintas.png" alt="Logo"></div><div class="c-body"><h3>FAMILY</h3><div class="speed">15 Mbps</div><div class="price">Rp 150.000 / bln</div><button type="button" class="btn-p" onclick="pilih('Paket FAMILY - 15 Mbps (Rp 150.000/bln)')">Pilih Paket</button></div></div>
-<div class="card"><div class="c-img"><img src="logo%20lintas.png" alt="Logo"></div><div class="c-body"><h3>SOCIAL</h3><div class="speed">20 Mbps</div><div class="price">Rp 200.000 / bln</div><button type="button" class="btn-p" onclick="pilih('Paket SOCIAL - 20 Mbps (Rp 200.000/bln)')">Pilih Paket</button></div></div>
-</div>
-</section>
-<div id="layanan" class="bg-g">
-<div class="title"><h2>Management Server</h2><div class="line"></div></div>
-<div class="grid" style="max-width:1100px;margin:0 auto">
-<div class="t-box"><div><h4>1 Set Setting OLT</h4><p>Konfigurasi lengkap OLT untuk jaringan fiber optik.</p></div><div class="t-foot"><span>Rp 500.000</span><button type="button" class="btn-l" onclick="pilih('1 Set Setting OLT (Rp 500.000)')">Pesan &rarr;</button></div></div>
-<div class="t-box"><div><h4>Manajemen MikroTik</h4><p>Pengaturan bandwidth, firewall, dan routing MikroTik.</p></div><div class="t-foot"><span>Rp 200.000</span><button type="button" class="btn-l" onclick="pilih('Manajemen MikroTik (Rp 200.000)')">Pesan &rarr;</button></div></div>
-<div class="t-box"><div><h4>Layanan VPN (1 Router)</h4><p>Akses remote router aman untuk monitoring jaringan.</p></div><div class="t-foot"><span>Rp 50.000</span><button type="button" class="btn-l" onclick="pilih('Layanan VPN 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
-<div class="t-box"><div><h4>Layanan RADIUS (1 Router)</h4><p>Manajemen user PPPoE dan Hotspot terpusat.</p></div><div class="t-foot"><span>Rp 50.000</span><button type="button" class="btn-l" onclick="pilih('Layanan RADIUS 1 Router (Rp 50.000)')">Pesan &rarr;</button></div></div>
-<div class="t-box"><div><h4>Layanan FULL Management (1 Router)</h4><p>Manajemen user PPPoE dan Hotspot terpusat. pengecekan berkala hingga pengiriman file Voucher PDF</p></div><div class="t-foot"><span>Rp 150.000</span><button type="button" class="btn-l" onclick="pilih('Layanan FULL Management 1 Router (Rp 150.000)')">Pesan &rarr;</button></div></div>
-</div>
-</div>
-<section id="pesan" class="sec">
-<div class="title"><h2>Formulir Pemesanan</h2><div class="line"></div></div>
-<div class="form-box">
-<div class="fg"><label>Nama Lengkap</label><input type="text" id="nama" placeholder="Masukkan nama Anda"></div>
-<div class="fg"><label>Pilihan Paket / Layanan</label>
-<select id="paket-pilih">
-<option value="Paket HOME - 5 Mbps (Rp 70.000/bln)">Paket HOME - 5 Mbps (Rp 70.000/bln)</option>
-<option value="Paket SCHOOL - 10 Mbps (Rp 100.000/bln)">Paket SCHOOL - 10 Mbps (Rp 100.000/bln)</option>
-<option value="Paket FAMILY - 15 Mbps (Rp 150.000/bln)">Paket FAMILY - 15 Mbps (Rp 150.000/bln)</option>
-<option value="Paket SOCIAL - 20 Mbps (Rp 200.000/bln)">Paket SOCIAL - 20 Mbps (Rp 200.000/bln)</option>
-<option value="1 Set Setting OLT (Rp 500.000)">1 Set Setting OLT (Rp 500.000)</option>
-<option value="Manajemen MikroTik (Rp 200.000)">Manajemen MikroTik (Rp 200.000)</option>
-<option value="Layanan VPN 1 Router (Rp 50.000)">Layanan VPN 1 Router (Rp 50.000)</option>
-<option value="Layanan RADIUS 1 Router (Rp 50.000)">Layanan RADIUS 1 Router (Rp 50.000)</option>
-<option value="Layanan FULL Management 1 Router (Rp 150.000)">Layanan Full Management 1 Router (Rp 150.000)</option>
-</select></div>
-<div class="fg"><label>Alamat Pemasangan / Catatan</label><textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pemasangan"></textarea></div>
-<button type="button" class="btn-wa" onclick="kirimLangsung()">Kirim Pesanan ke WhatsApp</button>
-</div>
-</section>
-<footer>&copy; 2026 <strong>LINTAS DIGITAL</strong> - WhatsApp: 083124860439</footer>
-<script>
-function pilih(p){
-document.getElementById('paket-pilih').value=p;
-document.getElementById('pesan').scrollIntoView({behavior:'smooth'});
-document.getElementById('nama').focus();
-}
-function kirimLangsung(){
-var n=document.getElementById('nama').value.trim();
-var p=document.getElementById('paket-pilih').value;
-var a=document.getElementById('alamat').value.trim();
-if(!n||!a){alert("Silakan isi Nama dan Alamat terlebih dahulu.");return;}
-var teks="Halo Lintas Digital, saya mau pesan:\nNama: "+n+"\nPaket: "+p+"\nAlamat: "+a;
-window.location.href="whatsapp://send?phone=6283124860439&text="+encodeURIComponent(teks);
-}
-</script>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">BrandKamu</a>
+      <ul class="nav-links">
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Bangun Kehadiran Digital yang Jelas & Terpercaya</h1>
+        <p>Template halaman utama siap pakai untuk profil usaha, portofolio, atau proyek awal kamu tanpa ribet.</p>
+        <a href="#kontak" class="btn">Hubungi Kami</a>
+      </div>
+    </section>
+
+    <section id="tentang" class="section">
+      <div class="container">
+        <h2 class="section-title">Tentang Kami</h2>
+        <p style="max-width: 700px; margin: 0 auto; text-align: center; color: #4b5563;">
+          Kami membantu ide dan bisnis tampil rapi di internet dengan struktur yang ringan, cepat dimuat, dan mudah dikembangkan.
+        </p>
+      </div>
+    </section>
+
+    <section id="layanan" class="section" style="background: #ffffff; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
+      <div class="container">
+        <h2 class="section-title">Layanan & Fitur</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Desain Responsif</h3>
+            <p>Tampilan menyesuaikan ukuran layar HP, tablet, maupun laptop secara otomatis.</p>
+          </div>
+          <div class="card">
+            <h3>Struktur Rapi</h3>
+            <p>Menggunakan tag HTML semantik agar mudah dibaca mesin pencari dan tim developer.</p>
+          </div>
+          <div class="card">
+            <h3>Siap Di-Deploy</h3>
+            <p>Bisa langsung diunggah ke hosting, GitHub Pages, Vercel, atau Netlify.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="section">
+      <div class="container">
+        <h2 class="section-title">Kontak</h2>
+        <div class="contact-box">
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="nama">Nama</label>
+              <input type="text" id="nama" name="nama" placeholder="Nama lengkap kamu" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="nama@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="pesan">Pesan</label>
+              <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis kebutuhan atau pertanyaan kamu..." required></textarea>
+            </div>
+            <button type="submit">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 BrandKamu. Semua hak cipta dilindungi.
+    </div>
+  </footer>
+
 </body>
 </html>
